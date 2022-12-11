@@ -6,7 +6,7 @@ type PropsType = {
     title: string
 }
 
-function UnControlledAccordion(props: PropsType) {
+export function UnControlledAccordion(props: PropsType) {
 
     let [collapsed, setCollapsed] = useState(false)
     return (
@@ -24,6 +24,5 @@ function UnControlledAccordion(props: PropsType) {
 
 }
 
-export default UnControlledAccordion
 
 

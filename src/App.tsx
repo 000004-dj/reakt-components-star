@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import './App.css';
 // import {OnOff} from "./Components/OnOff/OnOff";
-import Accordion from "./Components/Accardion/Accordion";
-import UnControlledAccordion from "./Components/UnControledAccardion/UnControlledAccordion";
+import {Accordion} from "./Components/Accardion/Accordion";
+import {UnControlledAccordion} from "./Components/UnControledAccardion/UnControlledAccordion";
 import {UnControlledRating} from "./Components/UnControlledRating/UnControlledRating";
 import {Rating, RatingValueType} from "./Components/Rating/Rating"
 import {UncontrolledOnOff} from "./Components/UncontrolledOnOff/UncontrolledOnOff";

@@ -4,6 +4,7 @@ type titleType = {
     title: string
     onClick: () => void
     collapsed: boolean
+
 }
 
 function AccordionTitle(props: titleType) {

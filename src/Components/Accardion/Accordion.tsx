@@ -4,13 +4,19 @@ import AccordionBody from "./AccordionBody";
 import UnControlledAccordionTitle from "../UnControledAccardion/UnControlledAccordionTitle";
 import UnControlledAccordionBody from "../UnControledAccardion/UnControlledAccordionBody";
 
-type PropsType = {
+export type AccordionPropsType = {
     title: string
+    /**
+     * Elements that are showed when is opened
+     */
     collapsed: boolean
+    /**
+     * Callback that is called when any item clicked
+     */
     onClick: () => void
 }
 
-function Accordion(props: PropsType) {
+export function Accordion(props: AccordionPropsType) {
     return (
         <div>
             <div>
@@ -27,16 +33,4 @@ function Accordion(props: PropsType) {
 
 }
 
-export default Accordion
 
-
-// const Accordion2 = (props: PropsType) => {
-//
-//     return (
-//         <div>
-//             <AccordionTitle title={props.title}/>
-//             {!props.collapsed && <AccordionBody/>}
-//         </div>
-//     )
-//
-// }
