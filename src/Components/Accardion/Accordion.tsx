@@ -1,9 +1,11 @@
 import React from 'react';
 import AccordionTitle from "./AccordionTitle";
 import AccordionBody from "./AccordionBody";
-import UnControlledAccordionTitle from "../UnControledAccardion/UnControlledAccordionTitle";
-import UnControlledAccordionBody from "../UnControledAccardion/UnControlledAccordionBody";
 
+export type ItemType = {
+    title: string
+    value: any
+}
 export type AccordionPropsType = {
     title: string
     /**
@@ -14,6 +16,7 @@ export type AccordionPropsType = {
      * Callback that is called when any item clicked
      */
     onClick: () => void
+    items: ItemType[]
 }
 
 export function Accordion(props: AccordionPropsType) {
@@ -22,8 +25,8 @@ export function Accordion(props: AccordionPropsType) {
             <div>
 
             </div>
-            <UnControlledAccordionTitle title={props.title} onClick={props.onClick}/>
-            {!props.collapsed && <UnControlledAccordionBody/>}
+            <AccordionTitle title={props.title} onClick={props.onClick}/>
+            {!props.collapsed && <AccordionBody items={props.items} onClick={props.onClick}/>}
 
 
         </div>
