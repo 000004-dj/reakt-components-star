@@ -1,29 +1,29 @@
 import React, {useState} from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import {ComponentMeta } from '@storybook/react';
 
-import {Rating, RatingValueType} from './Rating';
+import {RatingUsable, RatingValueType} from './Rating';
 import {action} from "@storybook/addon-actions";
 
 
 export default {
     title: 'Rating',
-    component: Rating,
+    component: RatingUsable,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof Rating>;
+} as ComponentMeta<typeof RatingUsable>;
 
-export const EmptyStars = () => <Rating onClick={action("clicked")} value={0}/>
-export const Rating1 = () => <Rating onClick={action("clicked")} value={1}/>
-export const Rating2 = () => <Rating onClick={action("clicked")} value={2}/>
-export const Rating3 = () => <Rating onClick={action("clicked")} value={3}/>
-export const Rating4 = () => <Rating onClick={action("clicked")} value={4}/>
-export const Rating5 = () => <Rating onClick={action("clicked")} value={5}/>
+export const EmptyStars = () => <RatingUsable onClick={action("clicked")} value={0}/>
+export const Rating1 = () => <RatingUsable onClick={action("clicked")} value={1}/>
+export const Rating2 = () => <RatingUsable onClick={action("clicked")} value={2}/>
+export const Rating3 = () => <RatingUsable onClick={action("clicked")} value={3}/>
+export const Rating4 = () => <RatingUsable onClick={action("clicked")} value={4}/>
+export const Rating5 = () => <RatingUsable onClick={action("clicked")} value={5}/>
 
 export const ChangingRating = () => {
     const [rating, setRating] = useState<RatingValueType>(5)
     return(
-    <Rating onClick={setRating} value={rating}/>)}
+    <RatingUsable onClick={setRating} value={rating}/>)}
 
 
 

@@ -1,21 +1,26 @@
-import React, {useState} from 'react';
-import UnControlledAccordionTitle from "./UnControlledAccordionTitle";
-import UnControlledAccordionBody from "./UnControlledAccordionBody";
+import React, {useReducer} from 'react';
+import {reducer} from "./reducer";
+import UnControlledAccordionBodyUsable from "./UnControlledAccordionBody";
+import UnControlledAccordionTitleUsable from "./UnControlledAccordionTitle";
 
 type PropsType = {
     title: string
 }
 
-export function UnControlledAccordion(props: PropsType) {
 
-    let [collapsed, setCollapsed] = useState(false)
+ function UnControlledAccordion(props: PropsType) {
+    console.log("Accordion rendering")
+
+    let [state, dispatch] = useReducer(reducer, {collapsed: false})
+
     return (
         <div>
             <div>
 
             </div>
-            <UnControlledAccordionTitle title={props.title} onClick={() => setCollapsed(!collapsed)}/>
-            {!collapsed && <UnControlledAccordionBody/>}
+            {/*<UnControlledAccordionTitle title={props.title} onClick={() => setCollapsed(!collapsed)}/>*/}
+            <UnControlledAccordionTitleUsable title={props.title} onClick={() => dispatch({type: "TOGGLE-COLLAPSED"})}/>
+            {!state.collapsed && <UnControlledAccordionBodyUsable/>}
 
 
         </div>
@@ -23,6 +28,9 @@ export function UnControlledAccordion(props: PropsType) {
     )
 
 }
+
+
+export const UnControlledAccordionUsable = React.memo(UnControlledAccordion)
 
 
 

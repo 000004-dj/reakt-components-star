@@ -12,4 +12,5 @@ function AccordionTitle(props: titleType) {
         <div onClick={props.onClick}><br/>{props.title}</div>
     )
 }
-export default AccordionTitle
+
+export const  AccordionTitleUsable = React.memo(AccordionTitle)

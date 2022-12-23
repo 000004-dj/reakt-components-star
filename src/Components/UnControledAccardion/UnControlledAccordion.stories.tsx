@@ -1,21 +1,19 @@
-import React, {useState} from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react';
+import {ComponentMeta } from '@storybook/react';
 
-import {UnControlledAccordion}  from './UnControlledAccordion';
-import {action} from "@storybook/addon-actions";
+import {UnControlledAccordionUsable}  from './UnControlledAccordion';
 
 
 export default {
     title: 'UnControlledAccordion',
-    component: UnControlledAccordion,
+    component: UnControlledAccordionUsable,
     argTypes: {
         backgroundColor: { control: 'blue' },
     },
-} as ComponentMeta<typeof UnControlledAccordion>;
+} as ComponentMeta<typeof UnControlledAccordionUsable>;
 
-// const callback = action("accordion mode event fired")
 
-export const ActiveMode = () => <UnControlledAccordion title={"menu"}/>
+export const ActiveMode = () => <UnControlledAccordionUsable title={"menu"}/>
 
 
 

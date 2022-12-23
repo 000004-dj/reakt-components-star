@@ -1,26 +1,26 @@
 import React, {useState} from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta } from '@storybook/react';
 
-import {OnOff} from './OnOff';
+import {OnOffUsable} from './OnOff';
 import {action} from "@storybook/addon-actions";
 
 
 export default {
     title: 'OnOff',
-    component: OnOff,
+    component: OnOffUsable,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof OnOff>;
+} as ComponentMeta<typeof OnOffUsable>;
 
 const callback = action("on or off clicked")
 
-export const OnMode = () => <OnOff on={true} setOn={callback} />
-export const OffMode = () => <OnOff on={false} setOn={callback}/>
+export const OnMode = () => <OnOffUsable on={true} setOn={callback} />
+export const OffMode = () => <OnOffUsable on={false} setOn={callback}/>
 
 export const ActiveMode = () =>{
  const [value, setValue] = useState<boolean>(false)
-    return <OnOff setOn={setValue} on={value}/>
+    return <OnOffUsable setOn={setValue} on={value}/>
 }
 
 

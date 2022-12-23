@@ -1,19 +1,18 @@
-import React, {useState} from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react';
+import {ComponentMeta} from '@storybook/react';
 
-import {UnControlledRating} from './UnControlledRating';
-import {action} from "@storybook/addon-actions";
+import {UnControlledRatingUsable} from './UnControlledRating';
 
 
 export default {
     title: 'UnControlledRating',
-    component: UnControlledRating,
+    component: UnControlledRatingUsable,
     argTypes: {
-        backgroundColor: { control: 'color' },
+        backgroundColor: {control: 'color'},
     },
-} as ComponentMeta<typeof UnControlledRating>;
+} as ComponentMeta<typeof UnControlledRatingUsable>;
 
-export const StarsActiveMode = () => <UnControlledRating />
+export const StarsActiveMode = () => <UnControlledRatingUsable/>
 
 
 

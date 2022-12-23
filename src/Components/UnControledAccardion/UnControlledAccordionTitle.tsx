@@ -6,11 +6,13 @@ type titleType = {
 }
 
 function UnControlledAccordionTitle(props: titleType) {
-
+    console.log("Title rendering")
     return (
 
         <div onClick={props.onClick}><br/>{props.title}</div>
     )
 }
 
-export default UnControlledAccordionTitle
+const UnControlledAccordionTitleUsable = React.memo(UnControlledAccordionTitle)
+
+export default UnControlledAccordionTitleUsable

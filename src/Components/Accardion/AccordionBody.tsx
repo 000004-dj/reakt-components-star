@@ -16,6 +16,7 @@ function AccordionBody(props:AccordionBodyPropsType) {
         </ul>
     )
 }
-export default AccordionBody
 
 
+
+export const AccordionBodyUsable = React.memo(AccordionBody)

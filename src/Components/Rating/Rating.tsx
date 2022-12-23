@@ -10,7 +10,7 @@ type RatingPropsType = {
 }
 
 
-export function Rating(props: RatingPropsType) {
+function Rating(props: RatingPropsType) {
 
     return (
         <div>
@@ -23,3 +23,5 @@ export function Rating(props: RatingPropsType) {
     )
 
 }
+
+export const RatingUsable = React.memo(Rating)

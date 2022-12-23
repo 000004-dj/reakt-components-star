@@ -2,6 +2,7 @@ import React from 'react';
 
 
 function UnControlledAccordionBody() {
+    console.log("Body rendering")
     return (
         <ul>
             <li>1</li>
@@ -12,4 +13,6 @@ function UnControlledAccordionBody() {
     )
 }
 
-export default UnControlledAccordionBody
+const UnControlledAccordionBodyUsable = React.memo(UnControlledAccordionBody)
+
+export default UnControlledAccordionBodyUsable

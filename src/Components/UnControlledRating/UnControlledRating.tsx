@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import UnControlledStar from './UnControlledStar'
 
+export const UnControlledRatingUsable = React.memo(UnControlledRating)
 
-
-export function UnControlledRating() {
+ function UnControlledRating() {
 
     let [value, setValue] = useState(0)
     return (

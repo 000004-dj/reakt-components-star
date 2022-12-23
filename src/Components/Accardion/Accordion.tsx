@@ -1,6 +1,6 @@
 import React from 'react';
-import AccordionTitle from "./AccordionTitle";
-import AccordionBody from "./AccordionBody";
+import {AccordionTitleUsable} from "./AccordionTitle";
+import {AccordionBodyUsable} from "./AccordionBody";
 
 export type ItemType = {
     title: string
@@ -19,14 +19,14 @@ export type AccordionPropsType = {
     items: ItemType[]
 }
 
-export function Accordion(props: AccordionPropsType) {
+ function Accordion(props: AccordionPropsType) {
     return (
         <div>
             <div>
 
             </div>
-            <AccordionTitle title={props.title} onClick={props.onClick}/>
-            {!props.collapsed && <AccordionBody items={props.items} onClick={props.onClick}/>}
+            <AccordionTitleUsable title={props.title} onClick={props.onClick}/>
+            {!props.collapsed && <AccordionBodyUsable items={props.items} onClick={props.onClick}/>}
 
 
         </div>
@@ -35,5 +35,8 @@ export function Accordion(props: AccordionPropsType) {
 
 
 }
+
+
+export const AccordionUsable = React.memo(Accordion)
 
 

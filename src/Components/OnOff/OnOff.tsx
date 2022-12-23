@@ -6,7 +6,7 @@ type PropsType = {
     on: boolean
 }
 
-export const OnOff = (props: PropsType) => {
+ const OnOff = (props: PropsType) => {
 
     const onStyle = {
         width: "30px",
@@ -46,3 +46,6 @@ export const OnOff = (props: PropsType) => {
         </div>
     )
 }
+
+
+export const OnOffUsable = React.memo(OnOff)

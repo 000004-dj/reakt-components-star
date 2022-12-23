@@ -5,7 +5,9 @@ type PropsType = {
     setOn: (on: boolean) => void
 }
 
-export const UncontrolledOnOff = (props: PropsType) => {
+
+
+const UncontrolledOnOff = (props: PropsType) => {
 
     let [on, setOff] = useState(false)
     const onStyle = {
@@ -56,3 +58,4 @@ export const UncontrolledOnOff = (props: PropsType) => {
         </div>
     )
 }
+export const UncontrolledOnOffUsable = React.memo(UncontrolledOnOff)
