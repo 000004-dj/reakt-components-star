@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useMemo, useState} from "react";
 import {v1} from "uuid";
 
 export default {
@@ -15,7 +15,6 @@ const UsersSecrets = (props: { users: Array<string>, }) => {
     }
     </div>
 }
-
 const Users = React.memo(UsersSecrets)
 
 
@@ -40,6 +39,4 @@ export const Example1 = () => {
         </>
     )
 }
-
-
 

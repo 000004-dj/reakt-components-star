@@ -44,6 +44,26 @@ export const WithoutValue = () => {
 
 
 
+export const ExampleUseMemo1 = () => {
+
+    const [value, setValue] = useState(null)
+
+    return (
+        <SelectUsable
+            value={value}
+            onChange={setValue}
+            items={[
+                {title: "Sam", value: "1"},
+                {title: "Alena", value: "2"},
+                {title: "Lol", value: "3"}
+            ]}
+        />
+    )
+}
+
+
+
+
 
 
 
