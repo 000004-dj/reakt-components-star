@@ -1,13 +1,13 @@
 import React, {ChangeEvent, useRef, useState} from 'react';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
 
-import {OnOff} from "../Components/OnOff/OnOff";
+import {OnOffUsable} from "../Components/OnOff/OnOff";
 import {action} from "@storybook/addon-actions";
 
 export default {
     title: 'input',
-    component: OnOff,
-} as ComponentMeta<typeof OnOff>
+    component: OnOffUsable,
+} as ComponentMeta<typeof OnOffUsable>
 
 export const UncontrolledInput = () => <input/>
 export const TrackValueOfUncontrolledInput = () => {
